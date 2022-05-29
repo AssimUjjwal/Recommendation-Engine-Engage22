@@ -1,0 +1,31 @@
+@use "../../scss/" as *;
+// @use "../../scss/breakpoint" as *;
+
+.casts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+
+    @include tablet {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+
+    @include mobile {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    &__item {
+        &__img {
+            padding-top: 230px;
+            background-size: cover;
+            margin-bottom: 0.5rem;
+            @include mobile {
+                padding-top: 180px;
+            }
+        }
+
+        &__name {
+            font-size: 0.8rem;
+        }
+    }
+}

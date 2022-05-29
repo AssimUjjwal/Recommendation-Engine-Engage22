@@ -1,0 +1,24 @@
+@use "../../scss/" as *;
+
+.video-list {
+    .swiper-slide {
+        width: 24%;
+
+        @include tablet {
+            width: 30%;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: 300px;
+        }
+    }
+}
+
+.video {
+    margin-bottom: 3rem;
+
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+}
